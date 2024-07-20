@@ -3,7 +3,6 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import firebase_admin
 from firebase_admin import credentials, firestore
-# from fastapi.middleware.cors import CORSMiddleware
 from dotenv import dotenv_values
 
 config = dotenv_values(".env")
@@ -13,21 +12,6 @@ firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 app = FastAPI(title="User", version="1.0.0")
-
-# origins = [
-#     "http://localhost.tiangolo.com",
-#     "https://localhost.tiangolo.com",
-#     "http://localhost",
-#     "http://localhost:8080",
-# ]
-
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
 
 
 @app.post("/add_users")
