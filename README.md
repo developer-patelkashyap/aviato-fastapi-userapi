@@ -23,8 +23,3 @@ To create a single API endpoint that accepts a JSON object with a dynamic number
 ### Delete User
 * **Endpoint:** `DELETE /delete_users`
 * **Response:** JSON confirming deletion
-
-## Documentation
-
-* **ReDoc:** [http://13.49.57.115/redoc](http://13.49.57.115/redoc)
-* **Swagger Doc:** [http://13.49.57.115/docs](http://13.49.57.115/docs)
